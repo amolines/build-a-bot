@@ -18,7 +18,7 @@
             {{robot.head.title}}
           </td>
           <td class="cost">
-            {{robot.cost}}
+            {{robot.cost | currency('$')}}
           </td>
         </tr>
       </tbody>
@@ -41,7 +41,7 @@
             {{robot.head.title}}
           </td>
           <td class="cost">
-            {{robot.cost}}
+            {{robot.cost | currency('$')}}
           </td>
         </tr>
       </tbody>
@@ -57,8 +57,6 @@ export default {
   computed: {
     ...mapGetters('robots', { cartSaleItems: 'cartSaleItems' }),
     ...mapState('robots', { cart: 'cart' }),
-
-
   },
 };
 </script>
